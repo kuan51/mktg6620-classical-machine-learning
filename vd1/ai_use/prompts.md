@@ -50,7 +50,15 @@ and before the evaluate command was run.
     length). The student revised again.
 12. Third draft. The student kept the AUC/return-on-investment sentence; Claude recorded the text
     verbatim in `analysis.md`, committed it, then ran `evaluate --choice trees`.
-13. <!-- TODO(you): add any later prompts, including ones that did not work. -->
+13. "Help me understand how the boosted tree and logistic regression affect churn" (quoting the Q1 TODO).
+    Claude corrected the premise (the methods score risk; they do not change churn) and showed the
+    fitted logistic weights, tree input usage and two example customers.
+14. Student sent a Q1 draft. Claude listed four factual errors (cause and effect in the contract rule,
+    no input selection in logistic, 0-1 applies to the output, trees do not resample churners). The
+    student revised it and asked why the methods share the same inputs; Claude explained (fair
+    comparison, same information). On the second draft Claude flagged two remaining points (same
+    inputs vs same baseline; "improves outcomes"); the student chose to record it as written.
+15. <!-- TODO(you): add any later prompts, including ones that did not work. -->
 
 ## Two checks I personally understood
 

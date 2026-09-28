@@ -47,7 +47,7 @@ tenure, MonthlyCharges, TotalCharges, Contract, InternetService, PaperlessBillin
 | Logistic regression | C = 1, numeric inputs scaled and categories one-hot encoded on training rows only |
 | Boosted trees | 100 trees, depth 2, learning rate 0.1, same preprocessing |
 
-<!-- TODO(you): explain in your own words how each of the three methods turns the inputs into a churn score, and why they share the same inputs. -->
+The contract methods is a simple procedure that contacts users based on their subscription renewal frequency. It scores the subscriber based on this renewal frequency and ties are broken with random decisions. Logistic regression uses all of the predictors and weights each, turning them into a probability. This makes it easy to explain the model and why its making its predictions. The boosted tree approach iterates through decision trees and adjusts to earlier mistakes to improve the models predictive power. The three approaches are chosen and use the same baseline, the contract, to compare. This makes the comparison objective and empirically shows which approach improves outcomes.
 
 **AI use.** See `ai_use/prompts.md` (prompts, what AI did, two checks I understood) and the chat export in `ai_use/`.
 
