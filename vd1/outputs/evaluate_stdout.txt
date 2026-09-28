@@ -1,0 +1,32 @@
+VALIDATION RESULTS
+  method    n      auc  contact_n  top20_churn_rate  top20_mean_prediction  mean_prediction  observed_churn_rate
+contract 1409 0.742724        281          0.416370               0.427530         0.258283             0.265436
+logistic 1409 0.838417        281          0.612100               0.650996         0.271317             0.265436
+   trees 1409 0.845558        281          0.651246               0.662771         0.272776             0.265436
+Highest validation AUC: trees
+FINAL TEST RESULTS
+  method    n      auc  contact_n  top20_churn_rate  top20_mean_prediction  mean_prediction  observed_churn_rate
+contract 1409 0.737265        281          0.398577               0.427530         0.268615             0.265436
+logistic 1409 0.847207        281          0.693950               0.640176         0.273257             0.265436
+   trees 1409 0.849665        281          0.693950               0.647865         0.270473             0.265436
+
+AUC INTERVALS
+             comparison  estimate       low     high
+               contract  0.737265  0.716259 0.755731
+               logistic  0.847207  0.825442 0.870030
+                  trees  0.849665  0.828267 0.873164
+logistic minus contract  0.109942  0.093153 0.128505
+   trees minus contract  0.112400  0.095891 0.131117
+   trees minus logistic  0.002458 -0.004875 0.010193
+
+SCENARIOS: hypothetical dollars, not measured savings
+  method  historical_list_churn_rate  assumed_save_rate  net_per_1000_contacts  break_even_save_rate
+contract                    0.398577               0.10           -3569.395018              0.235687
+contract                    0.398577               0.15           -2254.092527              0.235687
+contract                    0.398577               0.20            -938.790036              0.235687
+logistic                    0.693950               0.10           -1619.928826              0.135369
+logistic                    0.693950               0.15             670.106762              0.135369
+logistic                    0.693950               0.20            2960.142349              0.135369
+   trees                    0.693950               0.10           -1619.928826              0.135369
+   trees                    0.693950               0.15             670.106762              0.135369
+   trees                    0.693950               0.20            2960.142349              0.135369
