@@ -45,7 +45,12 @@ and before the evaluate command was run.
     factual problems (single decision tree vs boosted trees; the list selects likely leavers, not
     stayers; retention depends on the unknown save rate; the AUC rule was not cited). The student
     chose to revise it in their own words.
-11. <!-- TODO(you): add any later prompts, including ones that did not work. -->
+11. Second draft of the reason. Claude listed remaining unsupported claims (models do not reduce churn;
+    the list still holds stayers; retention depends on the offer; AUC is not return on investment;
+    length). The student revised again.
+12. Third draft. The student kept the AUC/return-on-investment sentence; Claude recorded the text
+    verbatim in `analysis.md`, committed it, then ran `evaluate --choice trees`.
+13. <!-- TODO(you): add any later prompts, including ones that did not work. -->
 
 ## Two checks I personally understood
 

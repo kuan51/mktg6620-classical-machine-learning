@@ -79,3 +79,33 @@ Cost per leaver ÷ $66 = break-even s (trees: $9.52 / $66 ≈ 14.4%).
 2. Why is the contract rule's list churn rate almost the month-to-month rate?
 3. At s = 12%, which methods lose money?
 4. What would a trees-minus-logistic interval that crosses zero tell you?
+
+---
+
+# Final-test results (added after `evaluate --choice trees`)
+
+| | Contract rule | Logistic | Trees (chosen) |
+|---|---|---|---|
+| Final-test AUC | 0.737 | 0.847 | 0.850 |
+| Real leavers among 281 calls | 112 | 195 | 195 |
+| Share of list who left | 39.9% | 69.4% | 69.4% |
+| Cost per real leaver ($1,742.20 / leavers) | $15.56 | $8.93 | $8.93 |
+| Break-even save rate | 23.6% | 13.5% | 13.5% |
+
+What changed from validation, in plain words:
+- **Logistic caught up.** On validation, trees found 11 more leavers. On test, both lists find exactly
+  195. The lists are not identical: 234 of 281 customers are on both. The ranking gap is tiny
+  (+0.0025 AUC), and its interval, −0.005 to +0.010, includes zero. So the test cannot say which model
+  ranks better. It also does not prove they are equal.
+- **Both models clearly beat the old rule.** Trees minus contract is +0.112, with an interval of
+  +0.096 to +0.131. The whole range is above zero.
+- **Pairing, simply put.** Each of the 1,000 bootstrap rounds draws one random sample of test customers
+  (with repeats) and scores both methods on the same sample. The difference is taken inside each round,
+  so luck in which customers were drawn hits both methods equally and mostly cancels out.
+- **Calibration for trees.** Overall it guesses 27.0% against 26.5% observed, which is close. Inside the list
+  it guesses 64.8% against 69.4% observed, so it under-guesses by about 5 points. In the 0.2–0.4 group it
+  guesses 29.8% against 25.4% observed, so it over-guesses a bit. The top group, 0.8 to 1.0, has only 35
+  people (about 32 leavers), too few to judge.
+- **Money.** The test list is better than the validation list (69.4% vs 65.1%), so break-even drops to
+  13.5%. It is still negative at a 10% save rate and positive at 15% and 20%. The recommendation hinges
+  on a save rate the data cannot estimate.
