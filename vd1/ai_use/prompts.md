@@ -33,7 +33,19 @@ and before the evaluate command was run.
    > the supplied settings. Explain the data checks, the three partitions, and how each method makes
    > predictions. Show the validation table. Do not run the final evaluation until I record my choice.
    > Help me understand the output, but do not write my assessed explanations or decision memo.
-6. <!-- TODO(you): add any later prompts, including ones that did not work. -->
+6. "help me I dont understand this assignment or what its doing" — Claude gave a plain-language
+   overview of the business problem, the three partitions and the three methods.
+7. "What is the difference between list churn rate and observed churn rate? And between list mean
+   prediction and mean prediction?" — Claude explained actual vs predicted, list vs everyone.
+8. "Give me a full report walking through the findings and comparisons so I can study the results.
+   Explain like im 5." — Claude wrote the study report saved as `explainer_notes.md`.
+9. "Update the report matrix to include a cost estimate using the $6.20 per call and the total cost
+   for each model." — Claude added total call cost (281 × $6.20 = $1,742.20) and cost per real leaver.
+10. Student sent a first draft of the validation reason. Claude did not rewrite it; it listed four
+    factual problems (single decision tree vs boosted trees; the list selects likely leavers, not
+    stayers; retention depends on the unknown save rate; the AUC rule was not cited). The student
+    chose to revise it in their own words.
+11. <!-- TODO(you): add any later prompts, including ones that did not work. -->
 
 ## Two checks I personally understood
 
