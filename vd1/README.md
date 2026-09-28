@@ -48,3 +48,12 @@ Run from inside `vd1/`:
 `evaluate` was run. See the top of `analysis.md`.
 
 Optional check: `../.venv/bin/python check_outputs.py` should print `all checks passed`.
+
+## Building the memo PDF
+
+From the repo root, after `.venv/bin/pip install markdown`:
+
+```bash
+{ echo '<html><head><meta charset="utf-8"><style>body{font-family:Arial;font-size:10.5pt}table{border-collapse:collapse}td,th{border:1px solid #888;padding:2px 6px}</style></head><body>'; .venv/bin/python -m markdown -x tables vd1/memo.md; echo '</body></html>'; } > vd1/memo.html
+chromium --headless --no-sandbox --no-pdf-header-footer --print-to-pdf=vd1/memo.pdf file://$PWD/vd1/memo.html
+```

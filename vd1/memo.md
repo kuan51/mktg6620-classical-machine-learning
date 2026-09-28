@@ -1,6 +1,6 @@
-**To:** Devon Achebe, VP of Customer Retention, Summit Telecom
-**From:** Rex Linder
-**Date:** September 28, 2026
+**To:** Devon Achebe, VP of Customer Retention, Summit Telecom  
+**From:** Rex Linder  
+**Date:** September 28, 2026  
 **Re:** Should we pilot a model-built retention contact list?
 
 **Recommendation**
