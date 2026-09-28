@@ -1,0 +1,7 @@
+VALIDATION RESULTS
+  method    n      auc  contact_n  top20_churn_rate  top20_mean_prediction  mean_prediction  observed_churn_rate
+contract 1409 0.742724        281          0.416370               0.427530         0.258283             0.265436
+logistic 1409 0.838417        281          0.612100               0.650996         0.271317             0.265436
+   trees 1409 0.845558        281          0.651246               0.662771         0.272776             0.265436
+Highest validation AUC: trees
+Record a choice and reason in analysis.md before running evaluate.
