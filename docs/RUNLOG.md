@@ -10,3 +10,4 @@ Format: date, PLAN (what will be done) or DONE (what was verified, with the exac
 - DONE: compare stage. Command (from `vd1/`): `../.venv/bin/python VD1_analysis.py compare --csv churn.csv --out outputs 2>&1 | tee outputs/compare_stdout.txt`, exit 0. Validation AUC: contract 0.7427, logistic 0.8384, trees 0.8456. Sizes 4225/1409/1409.
 - DONE: independent checks. Command: `../.venv/bin/python check_outputs.py` printed `all checks passed` (7043x21, 1869/5174, 11 blanks at tenure 0, every source row in exactly one partition, list size 281).
 - PLAN: student records validation choice in `vd1/analysis.md` and DEC-001, commit, then run evaluate with that choice.
+- DONE: validation choice recorded as `trees` in `vd1/analysis.md` and DEC-001 (2026-09-28). Evaluate not yet run. Check: `ls vd1/outputs` shows no `test_metrics.csv`.
