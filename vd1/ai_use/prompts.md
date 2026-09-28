@@ -26,7 +26,14 @@ and before the evaluate command was run.
    commit `churn.csv`; Claude fills skeletons and tables, student writes the prose.
 3. Validation choice after the compare stage: `trees` (highest validation AUC); student writes the
    reason in `analysis.md`.
-4. <!-- TODO(you): add any later prompts, including ones that did not work. -->
+4. Asked for "sentences interpreting the results that I can use as inspiration". Claude declined to
+   draft them (course policy) and instead explained what each column of the validation table means.
+5. The handout's starting prompt, pasted verbatim after compare had already run:
+   > Read the Case 1 handout and VD1_analysis.py. Use the local churn.csv. Run the compare stage with
+   > the supplied settings. Explain the data checks, the three partitions, and how each method makes
+   > predictions. Show the validation table. Do not run the final evaluation until I record my choice.
+   > Help me understand the output, but do not write my assessed explanations or decision memo.
+6. <!-- TODO(you): add any later prompts, including ones that did not work. -->
 
 ## Two checks I personally understood
 
