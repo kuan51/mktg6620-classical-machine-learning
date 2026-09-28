@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Course data: obtain churn.csv from Canvas (see vd1/README.md)
+vd1/churn.csv
