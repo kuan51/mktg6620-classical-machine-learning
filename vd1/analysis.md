@@ -63,7 +63,7 @@ The contract methods is a simple procedure that contacts users based on their su
 | Blank TotalCharges | 11, all at tenure 0, filled with 0 (`VD1_analysis.py:55`); no rows removed |
 | Source file SHA-256 | `16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91` |
 
-<!-- TODO(you): explain why filling those 11 blanks with 0 is reasonable, and what it assumes. -->
+11 subscribers had a blank total charges and tenure of 0. Using 0 for the tenure is a reasonable assumption because it indicates a subscriber has not been charged yet and 0 is an honest representation of that.
 
 ### Separate partitions and training-only fitting
 
@@ -79,7 +79,7 @@ The contract methods is a simple procedure that contacts users based on their su
   preprocessing plus model pipeline at `VD1_analysis.py:89`, both using `df.iloc[train]` and `y[train]` only.
   Validation and test rows are only passed to `predict_proba`.
 
-<!-- TODO(you): explain why keeping the three partitions separate matters for trusting the final-test numbers. -->
+The script enforces a data split into 3 segments: training, validation, and final testing. Each customer stays in one of the piles for the entire analysis. Mixing the customers across the segments would bias the models. Keeping them contained to a segment ensures the models dont overtrain on those datapoints. The test pile is kept unseen and this is the key practice that prevents overfitting. A customer who appears in train and test would be a customer that the model understands very well. It will be able to predict that specific use case accurately. But this doesn't translate to real business value. The model would perform much worse when predicting customers it hasn't seen.
 
 ### Ranking and the contact list (final test, 1,409 rows, list = 281 = floor(20% × 1,409))
 
@@ -92,7 +92,7 @@ The contract methods is a simple procedure that contacts users based on their su
 The logistic and trees lists are different lists (234 of 281 customers in common) that happen to contain the same
 number of real leavers. Contract-rule ties are broken by a fixed random order that never uses outcomes.
 
-<!-- TODO(you): say which quantity answers Devon's contact-list question (AUC or list churn rate) and why; interpret the table against the baseline. -->
+Calling 281 people at random would contact leavers at a rate of 26.5%. The contract raises this to 39.9%. Using one of the alternative models increases the rate significantly to 69.4%. This translates to 195 leavers compared to 112 for the contract baseline. The list churn rate is what really answers Devon's questions. He will make more calls to someone who is actually likely to leave. The AUC score measures how well a method ranks leavers about stayers across the entire dataset and that includes a large portion of subscribers that would never be called. The higher AUC rate indicates that a "leaver" is more likely to be contacted using this model. Overall, the model performs will and seems to generalize decently.
 
 ## Q3 — Assess uncertainty and value
 

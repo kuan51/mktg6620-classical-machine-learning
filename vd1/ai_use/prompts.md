@@ -58,7 +58,15 @@ and before the evaluate command was run.
     student revised it and asked why the methods share the same inputs; Claude explained (fair
     comparison, same information). On the second draft Claude flagged two remaining points (same
     inputs vs same baseline; "improves outcomes"); the student chose to record it as written.
-15. <!-- TODO(you): add any later prompts, including ones that did not work. -->
+15. "Explain Q2's context for me and what I need to answer. ELI5" - Claude explained the three Q2 parts
+    and common traps, without drafting answers.
+16. Student sent Q2 drafts. Claude flagged factual points on the first draft (guessing why tenure is 0,
+    "cross validation", two piles vs three, blindness applies to the test pile, the contract list beats
+    random, which quantity answers Devon's question, no numbers cited). On the revision Claude flagged
+    "tenure" for TotalCharges in Part 1 and "prevents overfitting" in Part 2; the student chose to record
+    Parts 1-2 as written. The student confirmed Part 3 is in their own words and then sent a rewritten
+    Part 3, which is the version recorded.
+17. <!-- TODO(you): add any later prompts, including ones that did not work. -->
 
 ## Two checks I personally understood
 
