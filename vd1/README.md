@@ -45,6 +45,6 @@ Run from inside `vd1/`:
 ```
 
 **Recorded choice:** `trees` (boosted trees), chosen from the validation table on 2026-09-28 before
-`evaluate` was run. See the top of `analysis.md` and `docs/DECISIONS.md` (DEC-001).
+`evaluate` was run. See the top of `analysis.md`.
 
 Optional check: `../.venv/bin/python check_outputs.py` should print `all checks passed`.
