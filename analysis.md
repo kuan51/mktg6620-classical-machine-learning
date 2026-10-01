@@ -1,4 +1,4 @@
-# Case 1 — [Your name]
+# Case 1 — Rex Linder
 
 Choice record: On 9/30/2026, after seeing the validation table, I chose boosted trees because "leavers" are most likely to churn within the first quarter and the most recent months. The data set smooths out torwards a flatter curve in later quarters. This means the data is non-linear and logistic regression with tenure as a predictor would force selecting a straight line between two points on the curve.
 
