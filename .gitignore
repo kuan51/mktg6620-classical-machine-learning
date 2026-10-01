@@ -216,3 +216,62 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---------------------------------------------------------------------------
+# Course datasets and data files
+#
+# Per the Case 1 handout, a public data upload is not required; the grader
+# uses the same instructor-supplied course CSV. README.md documents how to
+# obtain it. Source data is therefore not tracked.
+#
+# IMPORTANT: outputs/ is a required deliverable and is re-included below.
+# Do not remove the negation rules without checking the submission spec.
+# ---------------------------------------------------------------------------
+
+# Instructor-supplied source data
+churn.csv
+
+# Distributed assignment archive (contents are tracked individually)
+VD1_student_files.zip
+
+# Generic data formats
+*.csv
+*.tsv
+*.psv
+*.xls
+*.xlsx
+*.xlsm
+*.parquet
+*.feather
+*.orc
+*.avro
+*.arrow
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.dta
+*.sav
+*.sas7bdat
+*.rds
+*.RData
+*.db
+*.sqlite
+*.sqlite3
+*.csv.gz
+*.csv.zip
+*.csv.bz2
+*.jsonl
+*.ndjson
+
+# Common raw-data directories
+data/
+raw/
+raw_data/
+datasets/
+
+# --- Required deliverables: script outputs are tracked ---
+!outputs/
+!outputs/**
